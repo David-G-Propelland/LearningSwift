@@ -4,11 +4,12 @@ import UIKit
 
 let chr = "c"
 
-// if chr == "a"{
-//     print("the character is a")
-// } else if chr == "b"{
-//     print("the character is b")
-// } too long to deal with
+var number:Int = 6
+var increment:Int = 2
+var desiredNumber:Int = 8
+var semiDesiredNumber:Int = 7
+
+number += increment
 
 switch chr {
 case "a":
@@ -17,4 +18,20 @@ case "b", "c":
     print("this is a b or c")
 default:
     print("this is the fallback")
+}
+
+switch number {
+    case desiredNumber:
+        print("desired")
+    default:
+        print("not desired")
+}
+
+switch number {
+    case desiredNumber:
+        print("only desired")
+    case semiDesiredNumber:
+        print("kind of desired")
+    default:
+        print("not desired")
 }
