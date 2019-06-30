@@ -1,22 +1,14 @@
 import UIKit
 
-func addTwoNumbers() {
-    let a = 1
-    let b = 2
-    let c = a + b
-    print(c)
-}
-
-func substractTwoNumbers() {
-    let d = 5
-    let e = 1
-    let f = d - e
-    print(f)
+func addTwoNumbers(firstNumber:Int, secondNumber:Int) -> Int {
+    let a = firstNumber
+    let b = secondNumber
+    let result = a + b
+    return result
 }
 
 //Never repeat yourself - never repeat code
-
-substractTwoNumbers()
+let sum = addTwoNumbers(firstNumber: 2, secondNumber: 5)
 
 //Variable scope
 //  variables declared in function only exists in the function
