@@ -13,8 +13,10 @@ class Employee {
 }
 
 class Manager: Employee { //: means inherit employee class properties and methods - subclass of Employee
+    
     //Properties
     var teamSize = 0
+    
     //Overrides / modify inherited methods
     override func doWork() {
         super.doWork() //This means keep the parent/super class while executing new code after
@@ -22,7 +24,7 @@ class Manager: Employee { //: means inherit employee class properties and method
         print("I'm managing my team")
         salary += 2
     }
-    
+
     func hirePeople() {
         print("I'm hiring people")
         teamSize += 1
