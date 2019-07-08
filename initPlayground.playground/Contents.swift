@@ -4,28 +4,25 @@ class Person {
     //Properties
     var name = ""
     
+    // default initialization code custom
     init() {
-        // default initialization code custom
-        // initialization is to set up an object and get it ready for use
+        
     }
     
-    init(_ name:String) {
-        // initializers can also take in parameters
-        self.name = name //self.name refers to the name var in line 5, while the name is referring to the parameter
+    // initializers that accept parameters
+    // init name(argumentLabel parameterName:dataType)
+    init(_ nameParameter:String) {
+        
     }
 }
 
 class Employee: Person {
+    
     //Properties
     var salary = 0
     var role = ""
-    //Methods
-    override init(_ name:String) { // you can still override an initializer as well as get super init
-        super.init(name)
-        
-        self.role = "Analyst"
-    }
     
+    //Methods
     func doWork() {
         print("Hi my name is \(name) and I'm doing work")
         salary += 1
@@ -51,9 +48,5 @@ class Manager: Employee { //: means inherit employee class properties and method
     }
 }
 
-let myPerson = Person("Tom")
-print (myPerson.name)
-
-let myEmployee = Employee("Salv")
-print (myEmployee.name)
-print (myEmployee.role)
+let personA = Person()
+print(personA.name)
