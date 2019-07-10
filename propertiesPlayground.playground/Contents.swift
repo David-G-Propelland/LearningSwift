@@ -16,6 +16,13 @@ class Manager: Employee { //: means inherit employee class properties and method
     
     //Properties
     var teamSize = 0
+    var bonus:Int {
+        // This is a computed property
+        // When it's accessed, the code in here will run
+        // Then we will return the value
+        
+        return teamSize * 1000
+    }
     
     //Overrides / modify inherited methods
     override func doWork() {
@@ -24,19 +31,8 @@ class Manager: Employee { //: means inherit employee class properties and method
         print("I'm managing my team")
         salary += 2
     }
-
+    
     func hirePeople() {
         print("I'm hiring people")
-        teamSize += 1
     }
 }
-
-var manager = Manager()
-manager.name = "Maggie"
-manager.salary = 2000
-manager.role = "Manager of IT"
-manager.teamSize = 10
-
-manager.doWork()
-manager.hirePeople()
-print(String(manager.teamSize))

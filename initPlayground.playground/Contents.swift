@@ -1,10 +1,27 @@
 import UIKit
 
-class Employee {
+class Person {
     //Properties
     var name = ""
+    
+    // default initialization code custom
+    init() {
+        
+    }
+    
+    // initializers that accept parameters
+    // init name(argumentLabel parameterName:dataType)
+    init(_ nameParameter:String) {
+        
+    }
+}
+
+class Employee: Person {
+    
+    //Properties
     var salary = 0
     var role = ""
+    
     //Methods
     func doWork() {
         print("Hi my name is \(name) and I'm doing work")
@@ -12,7 +29,7 @@ class Employee {
     }
 }
 
-class Manager: Employee { //: means inherit employee class properties and methods - subclass of Employee
+class Manager: Employee { //: means inherit employee class properties and methods - subclass of Employee - which also inherits properties from Person
     
     //Properties
     var teamSize = 0
@@ -24,19 +41,12 @@ class Manager: Employee { //: means inherit employee class properties and method
         print("I'm managing my team")
         salary += 2
     }
-
+    
     func hirePeople() {
         print("I'm hiring people")
         teamSize += 1
     }
 }
 
-var manager = Manager()
-manager.name = "Maggie"
-manager.salary = 2000
-manager.role = "Manager of IT"
-manager.teamSize = 10
-
-manager.doWork()
-manager.hirePeople()
-print(String(manager.teamSize))
+let personA = Person()
+print(personA.name)
