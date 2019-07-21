@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stacked_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EHU-8f-BaG" userLabel="listOfButtons">
+                                <rect key="frame" x="87.5" y="407" width="200" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9Q-bw-SIp" userLabel="buttonFacebook">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="48"/>
+                                        <state key="normal" title="Sign in with Facebook" backgroundImage="button.colored">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML5-iY-T28" userLabel="buttonGoogle">
+                                        <rect key="frame" x="0.0" y="63" width="200" height="48"/>
+                                        <state key="normal" title="Sign in with Google" backgroundImage="button.light"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUF-Ga-Weo" userLabel="buttonOther">
+                                        <rect key="frame" x="0.0" y="126" width="200" height="48"/>
+                                        <state key="normal" title="Sign in with Email">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Propelland" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cn-iJ-gKj" userLabel="mainLabel">
+                                <rect key="frame" x="86" y="220" width="203.5" height="37"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8Np-1E-m7B">
+                                <rect key="frame" x="100" y="70" width="175" height="148"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Cn-iJ-gKj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1wp-ZO-zzE"/>
+                            <constraint firstItem="8Np-1E-m7B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="2ah-uf-pT1"/>
+                            <constraint firstAttribute="trailing" secondItem="8Np-1E-m7B" secondAttribute="trailing" constant="100" id="6pl-wc-jrw"/>
+                            <constraint firstItem="8Cn-iJ-gKj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="AwK-ox-bMf"/>
+                            <constraint firstItem="EHU-8f-BaG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FuI-a8-rEA"/>
+                            <constraint firstItem="EHU-8f-BaG" firstAttribute="top" secondItem="8Cn-iJ-gKj" secondAttribute="bottom" constant="150" id="SgY-LM-2tK"/>
+                            <constraint firstItem="8Np-1E-m7B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="dnv-Cq-3XC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button.colored" width="200" height="48"/>
+        <image name="button.light" width="200" height="48"/>
+        <image name="logo" width="390" height="148"/>
+    </resources>
+</document>
